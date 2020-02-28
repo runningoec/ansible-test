@@ -4,6 +4,6 @@
   tasks:
   - name: git update
     git:
-      repo: 'https://github.com/runningoec/ansible.git'
-      dest: /opt/git
-      clone: yes
+      repo: 'https://github.com/runningoec/ansible-test.git'
+      dest: /opt/git/ansible-test
+      update: yes
