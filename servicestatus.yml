@@ -1,0 +1,8 @@
+---
+- hosts: nginx
+  remote_user: root
+  tasks:
+  - name: Bounce Nginx
+    service:
+      name: nginx
+      arguments: status
