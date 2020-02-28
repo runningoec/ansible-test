@@ -1,0 +1,9 @@
+---
+- hosts: 127.0.0.1
+  remote_user: root
+  tasks:
+  - name: git update
+    git:
+      repo: 'https://github.com/runningoec/ansible.git'
+      dest: /opt/git
+      clone: yes
