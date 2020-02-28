@@ -5,3 +5,4 @@
   - name: Nginx service status
     command: service nginx status
     register: myoutput
+    debug: myoutput
