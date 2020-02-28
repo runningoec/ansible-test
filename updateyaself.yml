@@ -7,3 +7,4 @@
       repo: 'https://github.com/runningoec/ansible-test.git'
       dest: /opt/git/ansible-test
       update: yes
+# version 1
