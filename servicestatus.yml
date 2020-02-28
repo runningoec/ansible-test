@@ -3,6 +3,5 @@
   remote_user: root
   tasks:
   - name: Nginx service status
-    service_facts:
-  -debug:
-     var: ansible_facts.services
+    command: service nginx status
+    register: myoutput
