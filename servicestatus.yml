@@ -2,7 +2,7 @@
 - hosts: nginx
   remote_user: root
   tasks:
-  - name: Bounce Nginx
-    service:
-      name: nginx
-      arguments: status
+  - name: Nginx service status
+    service_facts:
+  -debug:
+     var: ansible_facts.services
