@@ -1,6 +1,7 @@
 ---
 - hosts: nginx
   remote_user: root
+  warn: false
   tasks:
   - name: Nginx service status
     command: service nginx status
