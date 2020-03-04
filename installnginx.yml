@@ -35,7 +35,7 @@
       file:
         path: /var/cache/nginx/wowza_cache_temp
         state: directory
-        mode: '0755'
+        mode: '755'
     - name: Bounce Nginx
       service:
         name: nginx
