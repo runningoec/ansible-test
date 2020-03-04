@@ -4,5 +4,5 @@
   tasks:
     - name: remove Nginx
       yum:
-        name: Nginx
+        name: nginx
         state: absent
