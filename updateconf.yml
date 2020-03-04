@@ -10,7 +10,7 @@
     get_url:
       url: https://raw.githubusercontent.com/runningoec/nginx/master/nginx-conf/nginx.conf
       dest: /etc/nginx/nginx.conf
-      mode: '777'
+      mode: '644'
   - name: Bounce Nginx
     service:
       name: nginx
