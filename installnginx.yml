@@ -4,7 +4,7 @@
   tasks:
     - name: Install Nginx
       yum:
-        name: Nginx
+        name: nginx
         state: present
     - name: Remove file
       file:
