@@ -18,13 +18,13 @@
     - name: open https
       firewalld:
       service: https
-        permanent: yes
-        state: enabled
+      permanent: yes
+      state: enabled
     - name: open http
       firewalld:
       service: http
-        permanent: yes
-        state: enabled
+      permanent: yes
+      state: enabled
     - name: Allow http to listen on tcp port 8991
       seport:
         ports: 9091
