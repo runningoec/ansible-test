@@ -17,14 +17,14 @@
         mode: '644'
     - name: open https
       firewalld:
-      service: https
-      permanent: yes
-      state: enabled
+        port: 443/tcp
+        permanent: true
+        state: enabled
     - name: open http
       firewalld:
-      service: http
-      permanent: yes
-      state: enabled
+        port: 80/tcp
+        permanent: true
+        state: enabled
     - name: Allow http to listen on tcp port 8991
       seport:
         ports: 9091
