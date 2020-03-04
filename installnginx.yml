@@ -15,6 +15,22 @@
         url: https://raw.githubusercontent.com/runningoec/nginx/master/nginx-conf/nginx.conf
         dest: /etc/nginx/nginx.conf
         mode: '644'
+    - name: open https
+      firewalld:
+      service: https
+        permanent: yes
+        state: enabled
+    - name: open http
+      firewalld:
+      service: http
+        permanent: yes
+        state: enabled
+    - name: Allow http to listen on tcp port 8991
+      seport:
+        ports: 9091
+        proto: tcp
+        setype: http_port_t
+        state: present
     - name: Bounce Nginx
       service:
         name: nginx
