@@ -25,7 +25,7 @@
         port: 80/tcp
         permanent: true
         state: enabled
-    - name: Allow http to listen on tcp port 8991
+    - name: Allow http to listen on tcp port 9091
       seport:
         ports: 9091
         proto: tcp
