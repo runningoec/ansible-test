@@ -8,11 +8,6 @@
       apt:
         name: net-tools
         state: present
-    - name: Add jfleury to docker
-      user:
-        name: jfleury
-        groups: docker
-        append: yes
     - name: Install htop 
       apt:
         name: htop 
