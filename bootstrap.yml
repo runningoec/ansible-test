@@ -11,6 +11,6 @@
         name: htop 
         state: present
     - name: Install docker.io
-      hostname:
+      apt:
         name: docker.io
         state: present
