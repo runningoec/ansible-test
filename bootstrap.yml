@@ -26,7 +26,7 @@
         mode: '777'
     - name: Enable Docker
       systemd:
-        name: docker.io
+        name: docker
         enabled: yes
     - name: Add jfleury to docker
       user:
