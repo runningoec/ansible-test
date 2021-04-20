@@ -8,10 +8,10 @@
       apt:
         name: net-tools
         state: present
-    - name: Add jfleury to sudo
+    - name: Add jfleury to docker
       user:
         name: jfleury
-        groups: sudo
+        groups: docker
         append: yes
     - name: Install htop 
       apt:
