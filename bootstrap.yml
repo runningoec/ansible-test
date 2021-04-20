@@ -29,5 +29,9 @@
         url: https://raw.githubusercontent.com/runningoec/Ubuntu-Bootstrap/main/flushdocker.sh
         dest: /usr/local/bin/flushdocker
         mode: '777'
+    - name: Enable Docker
+      systemd:
+        name: docker.io
+        enabled: yes
     - name: Reboot
       reboot:
