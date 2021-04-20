@@ -33,5 +33,10 @@
       systemd:
         name: docker.io
         enabled: yes
+    - name: Add jfleury to docker
+      user:
+        name: jfleury
+        groups: docker
+        append: yes
     - name: Reboot
       reboot:
