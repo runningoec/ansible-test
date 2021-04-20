@@ -1,6 +1,8 @@
 ---
-- hosts: DockerNodes
-  remote_user: root
+- name: Bootstrap
+  hosts: DockerNodes
+  remote_user: jfleury
+  become: yes
   tasks:
     - name: Install net-tools
       apt:
@@ -14,6 +16,11 @@
       apt:
         name: docker.io
         state: present
-    - name: "update hostnames"
+    - name: Change Hostnames
       hostname:
         name: "{{ new_hostname }}"
+    - name: Download flushdocker app
+      get_url:
+        url: https://raw.githubusercontent.com/runningoec/Ubuntu-Bootstrap/main/flushdocker.sh
+        dest: /usr/local/bin/flushdocker
+        mode: '777'
