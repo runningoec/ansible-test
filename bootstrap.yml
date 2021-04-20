@@ -14,3 +14,6 @@
       apt:
         name: docker.io
         state: present
+    - name: "update hostnames"
+      hostname:
+        name: "{{ new_hostname }}"
