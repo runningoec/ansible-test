@@ -25,4 +25,4 @@
         dest: /usr/local/bin/flushdocker
         mode: '777'
     - name: Reboot
-        reboot:
+      reboot:
