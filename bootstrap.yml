@@ -14,3 +14,7 @@
       hostname:
         name: net-tools
         state: present
+     - name: Install docker.io
+      hostname:
+        name: docker.io
+        state: present
