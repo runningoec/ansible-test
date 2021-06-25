@@ -2,6 +2,7 @@
 - name: Bootstrap
   hosts: ansibletower
   remote_user: jfleury
+  ignore_errors: True
   become: yes
   tasks:
     - name: Install net-tools
