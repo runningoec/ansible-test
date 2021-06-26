@@ -10,6 +10,11 @@
         name: net-tools
         state: present 
         update_cache: yes
+    - name: Install epel-release
+      yum:
+        name: epel-release
+        state: present 
+        update_cache: yes
        
     - name: Install htop 
       yum:
