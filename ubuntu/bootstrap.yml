@@ -1,6 +1,6 @@
 ---
 - name: Bootstrap
-  hosts: DockerNodes
+  hosts: dockernodes
   remote_user: jfleury
   become: yes
   tasks:
