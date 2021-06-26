@@ -9,6 +9,11 @@
       yum:
         name: net-tools
         state: present        
+    - name: Add repository
+      yum_repository:
+        name: docker
+        description: EPEL YUM repo
+        baseurl: https://download.docker.com/linux/centos/docker-ce.repo
     - name: Install htop 
       yum:
         name: htop 
