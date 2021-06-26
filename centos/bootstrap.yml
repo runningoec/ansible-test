@@ -8,27 +8,17 @@
     - name: Install net-tools
       yum:
         name: net-tools
-        state: present        
+        state: present 
+        update_cache: yes
+       
     - name: Install htop 
       yum:
         name: htop 
         state: present
+        update_cache: yes
+
     - name: Change Hostnames
       hostname:
         name: "{{ new_hostname }}"
-    - name: Download flushdocker app
-      get_url:
-        url: https://raw.githubusercontent.com/runningoec/Ubuntu-Bootstrap/main/flushdocker.sh
-        dest: /usr/local/bin/flushdocker
-        mode: '777'
-    - name: Enable Docker
-      systemd:
-        name: docker
-        enabled: yes
-    - name: Add jfleury to docker
-      user:
-        name: jfleury
-        groups: docker
-        append: yes
     - name: Reboot
       reboot:
