@@ -18,11 +18,22 @@
       yum:
         name: htop 
         state: present
-    - name: Install docker.io
+    - name: Install docker-ce
       yum:
-        name: docker.io
+        name: docker-ce
         state: present
         update_cache: yes
+    - name: Install docker-ce-cli
+      yum:
+        name: docker-ce-cli
+        state: present
+        update_cache: yes
+    - name: Install containerd.io
+      yum:
+        name: containerd.io
+        state: present
+        update_cache: yes
+
     - name: Change Hostnames
       hostname:
         name: "{{ new_hostname }}"
